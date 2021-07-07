@@ -63,46 +63,138 @@ using namespace std;
 // }
 
 //check if a triplet is a pythagorean triplet or not
+// int main()
+// {
+//     int a, b, c;
+//     cin >> a >> b >> c;
+//     int max,sec,thi;
+//     if (a > b)
+//     {
+//         if (a > c)
+//         {
+//              max = a;
+//              sec = b;
+//              thi = c;
+//         }
+//         else
+//         {
+//              max = c;
+//              sec = b;
+//              thi = a;
+//         }
+//     }
+//     else
+//     {
+//         if (b > c)
+//         {
+//              max = b;
+//              sec = a;
+//              thi = c;
+//         }
+//         else
+//         {
+//              max = c;
+//              sec = a;
+//              thi = b;
+//         }
+//     }
+//      max= max*max;
+//     int sum = sec*sec + thi*thi;
+//     if(sum == max){
+//         cout<<"its an pythagorian triplet";
+//     }else{
+//         cout<<"its not";
+//     }
+// }
+
+//implement binary search
+// int main(){
+//     int n,key;
+//     cin>>n;
+//     cin>>key;
+//     int a[n];
+//     for(int i = 0 ; i< n; i++){
+//         cin>>a[i];
+//     }
+
+// }
+
+//reverse an array
+// int main()
+// {
+//     int n;
+//     int i;
+//     cin >> n;
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> arr[i];
+//     }
+//     for (int j = 0; j < n / 2; j++)
+//     {
+//         int sum = arr[n - j - 1];
+//         arr[n - j - 1] = arr[j];
+//         arr[j] = sum;
+//     }
+//     for (int i = 0; i < n; i++)
+//     {
+//         cout << arr[i];
+//     }
+// }
+
+//maximum and min elemnt in an array
+// int main(){
+//     int n;
+//     cin>>n;
+//     int arr[n];
+//     for(int i = 0 ;i < n ;i ++){
+//         cin>>arr[i];
+//     }
+//     int max = INT_MIN;
+//     int min = INT_MAX;
+//     for(int i = 0 ; i< n ; i++){
+
+//         if(arr[i] > max){
+//             max = arr[i];
+//         }
+//      if(arr[i] < min){
+//             min = arr[i];
+//         }else{
+//             continue;
+//         }
+//     }
+//     cout<<max<<endl<<min;
+// }
+
+//find the smallest kth element in the array
 int main()
 {
-    int a, b, c;
-    cin >> a >> b >> c;
-    int max,sec,thi;
-    if (a > b)
+    int n, k;
+    int num = 0;
+    cin >> n >> k;
+    int arr[n];
+    for (int i = 0; i < n; i++)
     {
-        if (a > c)
-        {
-             max = a;
-             sec = b;
-             thi = c;
-        }
-        else
-        {
-             max = c;
-             sec = b;
-             thi = a;
-        }
+        cin >> arr[i];
     }
-    else
+    for (int i = 0; i < k; i++)
     {
-        if (b > c)
+        int max = INT_MIN;
+        for (int j = 0; j < n; j++)
         {
-             max = b;
-             sec = a;
-             thi = c;
+            if (arr[j] > max)
+            {
+                num = j;
+                max = arr[j];
+            }
         }
-        else
+        if (i < k - 1)
         {
-             max = c;
-             sec = a;
-             thi = b;
+            arr[num] = 0;
         }
-    }
-     max= max*max;
-    int sum = sec*sec + thi*thi;
-    if(sum == max){
-        cout<<"its an pythagorian triplet";
-    }else{
-        cout<<"its not";
+        if (i = k - 1)
+        {
+            cout << max;
+        }
     }
 }
