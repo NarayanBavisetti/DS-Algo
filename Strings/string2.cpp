@@ -28,7 +28,7 @@ int main(){
 
 
 
-// to print the maximum output from the given number
+// to print the maximum number from the given number
 // string s1="0827304223498";
 // sort(s1.begin(),s1.end());
 // or
@@ -37,6 +37,13 @@ int main(){
 
 // cout<<s1;
 
-//print the maximum number of time the number is repeated
-
+//print the maximum number of time the letter is repeated
+string s1 = "asvnkloavnkadfnvio";
+int freq[26];
+for(int i = 0; i< 26; i++){
+    freq[i] = 0;
+}
+for (int i = 0 ; i< s1.size();i++){
+    freq[s1[i]- 'a']++; 
+}
 }

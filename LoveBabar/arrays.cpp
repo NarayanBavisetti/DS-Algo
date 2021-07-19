@@ -50,7 +50,7 @@ using namespace std;
 //     cout<<max<<endl<<min;
 // }
 
-//find the max kth element in the array
+//find the min kth element in the array
 // int main()
 // {
 //     int n, k;
